@@ -115,7 +115,6 @@ header {
   left: 0;
 }
 .contact-info .link {
-  color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -664,7 +663,6 @@ button {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: var(--primary-text-color);
   display: block;
   margin-bottom: 4px;
 }
@@ -706,11 +704,31 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  align-items: center;
   letter-spacing: 0.06em;
   color: var(--primary-white-color);
 }
-
+.check-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+}
+.check-text::before {
+  content: '';
+  width: 16px;
+  height: 15px;
+  border: 1.75px solid #000000;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  margin-right: 8.38px;
+}
+.modal-check:checked + .check-text::before {
+  background-color: var(--accent-color);
+  border: none;
+  box-shadow: none;
+  /* background-image: url(); */
+}
 /* 
 placeholder=""
 .modal-input:not(:focus):not(:placeholder-shown):valid {
@@ -718,4 +736,4 @@ placeholder=""
 }
 .modal-input:not(:focus):not(:placeholder-shown):invalid {
   background-color: rgba(224, 133, 133, 0.25);
-} */
+} */ ;
